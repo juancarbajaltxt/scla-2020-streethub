@@ -64,19 +64,7 @@ export class Tab1Page implements OnInit {
           animation: GoogleMapsAnimation.BOUNCE
         });
 
-        //show the infoWindow
-        marker1.showInfoWindow();
-    
-        //If clicked it, display the alert
-        marker1.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
-          this.showToast('Sells elotes and esquites!');
-        });
-
-        this.map.on(GoogleMapsEvent.MAP_READY).subscribe(
-          (data) => {
-            console.log("Click MAP",data);
-          }
-        );
+        
         //a marker
         let marker2: Marker = this.map.addMarkerSync({
           title: 'Tacos Los Pelones',
@@ -87,19 +75,7 @@ export class Tab1Page implements OnInit {
           },
           animation: GoogleMapsAnimation.BOUNCE
         }); 
-        //show the infoWindow
-        marker2.showInfoWindow();
-    
-        //If clicked it, display the alert
-        marker2.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
-          this.showToast('Sell delicious tacos!');
-        });
-
-        this.map.on(GoogleMapsEvent.MAP_READY).subscribe(
-          (data) => {
-            console.log("Click MAP",data);
-          }
-        );
+        
         //a marker
         let marker3: Marker = this.map.addMarkerSync({
           title: 'Taquero',
@@ -110,19 +86,7 @@ export class Tab1Page implements OnInit {
           },
           animation: GoogleMapsAnimation.BOUNCE
         }); 
-        //show the infoWindow
-        marker3.showInfoWindow();
-    
-        //If clicked it, display the alert
-        marker3.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
-          this.showToast('Sell delicious tacos!');
-        });
-
-        this.map.on(GoogleMapsEvent.MAP_READY).subscribe(
-          (data) => {
-            console.log("Click MAP",data);
-          }
-        );
+        
         //a marker
         let marker4: Marker = this.map.addMarkerSync({
           title: 'Tacos El Mazapan',
@@ -133,19 +97,7 @@ export class Tab1Page implements OnInit {
           },
           animation: GoogleMapsAnimation.BOUNCE
         }); 
-        //show the infoWindow
-        marker4.showInfoWindow();
-    
-        //If clicked it, display the alert
-        marker4.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
-          this.showToast('Sell delicious tacos and burritos!');
-        });
-
-        this.map.on(GoogleMapsEvent.MAP_READY).subscribe(
-          (data) => {
-            console.log("Click MAP",data);
-          }
-        );
+        
         //a marker
         let marker5: Marker = this.map.addMarkerSync({
           title: 'Tamalera',
@@ -156,19 +108,7 @@ export class Tab1Page implements OnInit {
           },
           animation: GoogleMapsAnimation.BOUNCE
         }); 
-        //show the infoWindow
-        marker5.showInfoWindow();
-    
-        //If clicked it, display the alert
-        marker5.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
-          this.showToast('Sells delicious tamales!');
-        });
-
-        this.map.on(GoogleMapsEvent.MAP_READY).subscribe(
-          (data) => {
-            console.log("Click MAP",data);
-          }
-        );
+        
         //a marker
         let marker6: Marker = this.map.addMarkerSync({
           title: 'Churros',
@@ -179,22 +119,10 @@ export class Tab1Page implements OnInit {
           },
           animation: GoogleMapsAnimation.BOUNCE
         }); 
-        //show the infoWindow
-        marker6.showInfoWindow();
-    
-        //If clicked it, display the alert
-        marker6.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
-          this.showToast('Sells delicious churros!');
-        });
-
-        this.map.on(GoogleMapsEvent.MAP_READY).subscribe(
-          (data) => {
-            console.log("Click MAP",data);
-          }
-        );
+        
         //a marker
         let marker7: Marker = this.map.addMarkerSync({
-          title: 'Crepes',
+          title: 'Crepas El Rey',
           snippet: 'Stationary',
           position: {
             lat: 34.009822, 
@@ -202,22 +130,10 @@ export class Tab1Page implements OnInit {
           },
           animation: GoogleMapsAnimation.BOUNCE
         }); 
-        //show the infoWindow
-        marker7.showInfoWindow();
-    
-        //If clicked it, display the alert
-        marker7.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
-          this.showToast('Sells delicious crepes!');
-        });
-
-        this.map.on(GoogleMapsEvent.MAP_READY).subscribe(
-          (data) => {
-            console.log("Click MAP",data);
-          }
-        );
+        
         //a marker
-        let marker8: Marker = this.map.addMarkerSync({
-          title: 'Fuit',
+        let marker8: Marker, setPostion = this.map.addMarker({
+          title: 'Fruit',
           snippet: 'Stationary',
           position: {
             lat: 34.040708,  
@@ -225,19 +141,9 @@ export class Tab1Page implements OnInit {
           },
           animation: GoogleMapsAnimation.BOUNCE
         }); 
-        //show the infoWindow
-        marker8.showInfoWindow();
-    
-        //If clicked it, display the alert
-        marker8.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
-          this.showToast('Sells fresh and cold fruit!');
-        });
-
-        this.map.on(GoogleMapsEvent.MAP_READY).subscribe(
-          (data) => {
-            console.log("Click MAP",data);
-          }
-        );
+        
+        
+        
       })
       .catch(err => {
       //this.loading.dismiss();

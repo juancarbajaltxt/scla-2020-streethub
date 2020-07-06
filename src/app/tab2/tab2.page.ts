@@ -52,28 +52,101 @@ export class Tab2Page implements OnInit{
             zoom: 10,
             duration: 3000
           });
+            //a marker
+        let marker1: Marker = this.map.addMarkerSync({
+          title: 'Elotero',
+          snippet: 'On the Go.',
+          position: {
+            lat: 34.023528,
+            lng: -118.265320
+          },
+          animation: GoogleMapsAnimation.BOUNCE
+        });
 
-            //add a marker
-            //let marker: Marker = this.map.addMarkerSync({
-              //title: 'Sample Marker',
-              //snippet: 'This is a description of the sample marker.',
-              //position: location.latLng,
-              //animation: GoogleMapsAnimation.BOUNCE
-            //});
+        
+        //a marker
+        let marker2: Marker = this.map.addMarkerSync({
+          title: 'Tacos Los Pelones',
+          snippet: 'Stationary',
+          position: {
+            lat: 34.019296,
+            lng: -118.268001
+          },
+          animation: GoogleMapsAnimation.BOUNCE
+        }); 
+        
+        //a marker
+        let marker3: Marker = this.map.addMarkerSync({
+          title: 'Taquero',
+          snippet: 'Stationary',
+          position: {
+            lat: 34.016336, 
+            lng: -118.264832
+          },
+          animation: GoogleMapsAnimation.BOUNCE
+        }); 
+        
+        //a marker
+        let marker4: Marker = this.map.addMarkerSync({
+          title: 'Tacos El Mazapan',
+          snippet: 'Stationary',
+          position: {
+            lat: 34.020971, 
+            lng: -118.189337
+          },
+          animation: GoogleMapsAnimation.BOUNCE
+        }); 
+        
+        //a marker
+        let marker5: Marker = this.map.addMarkerSync({
+          title: 'Tamalera',
+          snippet: 'Stationary',
+          position: {
+            lat: 34.022427, 
+            lng: -118.265969
+          },
+          animation: GoogleMapsAnimation.BOUNCE
+        }); 
+        
+        //a marker
+        let marker6: Marker = this.map.addMarkerSync({
+          title: 'Churros',
+          snippet: 'On the Go',
+          position: {
+            lat: 34.040642, 
+            lng: -118.186959
+          },
+          animation: GoogleMapsAnimation.BOUNCE
+        }); 
+        
+        //a marker
+        let marker7: Marker = this.map.addMarkerSync({
+          title: 'Crepas El Rey',
+          snippet: 'Stationary',
+          position: {
+            lat: 34.009822, 
+            lng: -118.265375
+          },
+          animation: GoogleMapsAnimation.BOUNCE
+        }); 
+        
+        //a marker
+        let marker8: Marker = this.map.addMarkerSync({
+          title: 'Fruit',
+          snippet: 'Stationary',
+          position: {
+            lat: 34.040708,  
+            lng: -118.184587
+          },
+          animation: GoogleMapsAnimation.BOUNCE
+        }); 
+        
 
-              //show the infoWindow
-              //marker.showInfoWindow();
-    
-                //If clicked it, display the alert
-                //marker.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
-                  //this.showToast('This is a pop out!');
-                //});
-
-              //this.map.on(GoogleMapsEvent.MAP_READY).subscribe(
-                //(data) => {
-                    //console.log("Click MAP",data);
-                //}
-              //);
+        this.map.on(GoogleMapsEvent.MAP_READY).subscribe(
+          (data) => {
+            console.log("Click MAP",data);
+          }
+        );
           })
 
         .catch(err => {

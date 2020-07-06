@@ -17,6 +17,14 @@ const routes: Routes = [
   {
     path: 'mile3',
     loadChildren: () => import('./mile3/mile3.module').then( m => m.Mile3PageModule)
+  },
+  {
+    path: 'taquero',
+    loadChildren: () => import('./taquero/taquero.module').then( m => m.TaqueroPageModule)
+  },
+  {
+    path: 'crepaselrey',
+    loadChildren: () => import('./crepaselrey/crepaselrey.module').then( m => m.CrepaselreyPageModule)
   }
 ];
 @NgModule({
