@@ -1,0 +1,293 @@
+import { Component, OnInit, Input, ViewChild ,ElementRef } from '@angular/core';
+import { ToastController, Platform } from '@ionic/angular';
+import {GoogleMaps, GoogleMap, GoogleMapsEvent, Marker, GoogleMapsAnimation, MyLocation } from '@ionic-native/google-maps';
+@Component({
+  selector: 'app-tab1',
+  templateUrl: 'tab1.page.html',
+  styleUrls: ['tab1.page.scss']
+})
+export class Tab1Page implements OnInit {
+  
+  map: GoogleMap; //<- declare the variable
+  address:MyLocation;
+  places : Array<any> ;
+  @ViewChild('map') mapElement: ElementRef;
+    constructor(
+      public toastCtrl: ToastController,
+      private platform: Platform
+    ) { } 
+  
+    ngOnInit() {
+      // Since ngOnInit() is executed before `deviceready` event,
+      // you have to wait the event.
+      this.platform.ready();
+      this.loadMap();
+      
+    }
+
+    loadMap() {
+      this.map = GoogleMaps.create('map_canvas', {
+        //camera: {
+        //target: {
+         //lat: 43.0741704,
+         //lng: -89.3809802
+        //},
+        //zoom: 18,
+        //tilt: 30
+      //}
+      });
+      this.goToMyLocation();
+    }
+
+    goToMyLocation(){
+      this.map.clear();
+    
+      // Get the location of you
+      this.map.getMyLocation().then((location: MyLocation) => {
+        console.log(JSON.stringify(location, null ,2));
+    
+        // Move the map camera to the location with animation
+        this.map.animateCamera({
+          target: location.latLng,
+          zoom: 10,
+          duration: 3000
+        });
+
+        //a marker
+        let marker1: Marker = this.map.addMarkerSync({
+          title: 'Elotero',
+          snippet: 'On the Go.',
+          position: {
+            lat: 34.023528,
+            lng: -118.265320
+          },
+          animation: GoogleMapsAnimation.BOUNCE
+        });
+
+        //show the infoWindow
+        marker1.showInfoWindow();
+    
+        //If clicked it, display the alert
+        marker1.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
+          this.showToast('Sells elotes and esquites!');
+        });
+
+        this.map.on(GoogleMapsEvent.MAP_READY).subscribe(
+          (data) => {
+            console.log("Click MAP",data);
+          }
+        );
+        //a marker
+        let marker2: Marker = this.map.addMarkerSync({
+          title: 'Tacos Los Pelones',
+          snippet: 'Stationary',
+          position: {
+            lat: 34.019296,
+            lng: -118.268001
+          },
+          animation: GoogleMapsAnimation.BOUNCE
+        }); 
+        //show the infoWindow
+        marker2.showInfoWindow();
+    
+        //If clicked it, display the alert
+        marker2.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
+          this.showToast('Sell delicious tacos!');
+        });
+
+        this.map.on(GoogleMapsEvent.MAP_READY).subscribe(
+          (data) => {
+            console.log("Click MAP",data);
+          }
+        );
+        //a marker
+        let marker3: Marker = this.map.addMarkerSync({
+          title: 'Taquero',
+          snippet: 'Stationary',
+          position: {
+            lat: 34.016336, 
+            lng: -118.264832
+          },
+          animation: GoogleMapsAnimation.BOUNCE
+        }); 
+        //show the infoWindow
+        marker3.showInfoWindow();
+    
+        //If clicked it, display the alert
+        marker3.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
+          this.showToast('Sell delicious tacos!');
+        });
+
+        this.map.on(GoogleMapsEvent.MAP_READY).subscribe(
+          (data) => {
+            console.log("Click MAP",data);
+          }
+        );
+        //a marker
+        let marker4: Marker = this.map.addMarkerSync({
+          title: 'Tacos El Mazapan',
+          snippet: 'Stationary',
+          position: {
+            lat: 34.020971, 
+            lng: -118.189337
+          },
+          animation: GoogleMapsAnimation.BOUNCE
+        }); 
+        //show the infoWindow
+        marker4.showInfoWindow();
+    
+        //If clicked it, display the alert
+        marker4.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
+          this.showToast('Sell delicious tacos and burritos!');
+        });
+
+        this.map.on(GoogleMapsEvent.MAP_READY).subscribe(
+          (data) => {
+            console.log("Click MAP",data);
+          }
+        );
+        //a marker
+        let marker5: Marker = this.map.addMarkerSync({
+          title: 'Tamalera',
+          snippet: 'Stationary',
+          position: {
+            lat: 34.022427, 
+            lng: -118.265969
+          },
+          animation: GoogleMapsAnimation.BOUNCE
+        }); 
+        //show the infoWindow
+        marker5.showInfoWindow();
+    
+        //If clicked it, display the alert
+        marker5.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
+          this.showToast('Sells delicious tamales!');
+        });
+
+        this.map.on(GoogleMapsEvent.MAP_READY).subscribe(
+          (data) => {
+            console.log("Click MAP",data);
+          }
+        );
+        //a marker
+        let marker6: Marker = this.map.addMarkerSync({
+          title: 'Churros',
+          snippet: 'On the Go',
+          position: {
+            lat: 34.040642, 
+            lng: -118.186959
+          },
+          animation: GoogleMapsAnimation.BOUNCE
+        }); 
+        //show the infoWindow
+        marker6.showInfoWindow();
+    
+        //If clicked it, display the alert
+        marker6.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
+          this.showToast('Sells delicious churros!');
+        });
+
+        this.map.on(GoogleMapsEvent.MAP_READY).subscribe(
+          (data) => {
+            console.log("Click MAP",data);
+          }
+        );
+        //a marker
+        let marker7: Marker = this.map.addMarkerSync({
+          title: 'Crepes',
+          snippet: 'Stationary',
+          position: {
+            lat: 34.009822, 
+            lng: -118.265375
+          },
+          animation: GoogleMapsAnimation.BOUNCE
+        }); 
+        //show the infoWindow
+        marker7.showInfoWindow();
+    
+        //If clicked it, display the alert
+        marker7.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
+          this.showToast('Sells delicious crepes!');
+        });
+
+        this.map.on(GoogleMapsEvent.MAP_READY).subscribe(
+          (data) => {
+            console.log("Click MAP",data);
+          }
+        );
+        //a marker
+        let marker8: Marker = this.map.addMarkerSync({
+          title: 'Fuit',
+          snippet: 'Stationary',
+          position: {
+            lat: 34.040708,  
+            lng: -118.184587
+          },
+          animation: GoogleMapsAnimation.BOUNCE
+        }); 
+        //show the infoWindow
+        marker8.showInfoWindow();
+    
+        //If clicked it, display the alert
+        marker8.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
+          this.showToast('Sells fresh and cold fruit!');
+        });
+
+        this.map.on(GoogleMapsEvent.MAP_READY).subscribe(
+          (data) => {
+            console.log("Click MAP",data);
+          }
+        );
+      })
+      .catch(err => {
+      //this.loading.dismiss();
+     this.showToast(err.error_message);
+      });
+    }
+    async showToast(message: string) { let toast = await this.toastCtrl.create({
+      message: message,
+      duration: 2000,
+      position: 'middle'
+      });
+      toast.present();
+    };
+
+}
+/// to add a marker
+//let marker: Marker = this.map.addMarkerSync({
+  //title: 'On the Go',
+  //snippet: 'Elotero',
+  //position: {
+    //lat: 34.023528,
+    //lng: -118.265320
+  //},
+  //animation: GoogleMapsAnimation.BOUNCE
+//});
+
+///show the infoWindow
+//marker1.showInfoWindow();
+
+//If clicked it, display the alert
+//marker1.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
+    //this.showToast('He sells elotes and esquites!');
+//});
+
+    //this.map.on(GoogleMapsEvent.MAP_READY).subscribe(
+      //(data) => {
+        //console.log("Click MAP",data);
+      //}
+    //);
+  
+//})
+//.catch(err => {
+ ///this.loading.dismiss();
+   //this.showToast(err.error_message);
+//});
+//}
+//async showToast(message: string) { let toast = await this.toastCtrl.create({
+//message: message,
+//duration: 2000,
+//position: 'middle'
+//});
+//toast.present();
+//}
