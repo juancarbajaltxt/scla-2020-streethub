@@ -16,19 +16,15 @@
 ion-tab-button{
     color: white;
 }
-#btnRadius { --ion-color-base: #ff6347 !important; 
-}
-ion-row{
-    height: 100px;
-    text-align: center;
+#btnback { 
+    --ion-color-base: #ff6347 !important; 
 }
 ion-button{
     width: 100%;
     text-align: center;
+    color: white;
+    background-color: tomato;
 }
 ion-tabs{
-    text-align: center;
-}
-ion-tab-button{
     text-align: center;
 }

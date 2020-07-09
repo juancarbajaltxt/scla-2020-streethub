@@ -1,15 +1,14 @@
 import { Component, OnInit, Input, ViewChild ,ElementRef } from '@angular/core';
 import { ToastController, Platform } from '@ionic/angular';
 import {GoogleMaps, GoogleMap, GoogleMapsEvent, Marker, GoogleMapsAnimation, MyLocation } from '@ionic-native/google-maps';
-
 @Component({
-  selector: 'app-taquero',
-  templateUrl: './taquero.page.html',
-  styleUrls: ['./taquero.page.scss'],
+  selector: 'app-elotero',
+  templateUrl: './elotero.page.html',
+  styleUrls: ['./elotero.page.scss'],
 })
-export class TaqueroPage implements OnInit {
+export class EloteroPage implements OnInit {
 
-    map: GoogleMap; //<- declare the variable
+  map: GoogleMap; //<- declare the variable
     address:MyLocation;
     places : Array<any> ;
     @ViewChild('map') mapElement: ElementRef;
@@ -63,12 +62,19 @@ export class TaqueroPage implements OnInit {
             },
             animation: GoogleMapsAnimation.BOUNCE
           });
+          //show the infoWindow
+          marker1.showInfoWindow();
+
+          //If clicked it, display the alert
+          marker1.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
+          this.showToast('Sell delicious elotes and esquites!');
+          });
   
           
           //a marker
           let marker2: Marker = this.map.addMarkerSync({
             title: 'Tacos Los Pelones',
-            snippet: '@tacos,quesadillas',
+            snippet: '@tacos,@quesadillas',
             position: {
               lat: 34.019296,
               lng: -118.268001
@@ -79,19 +85,12 @@ export class TaqueroPage implements OnInit {
           //a marker
           let marker3: Marker = this.map.addMarkerSync({
             title: 'Taquero',
-            snippet: '@tacos,quesadillas',
+            snippet: '@tacos,@quesadillas',
             position: {
               lat: 34.016336, 
               lng: -118.264832
             },
             animation: GoogleMapsAnimation.BOUNCE
-          });
-          //show the infoWindow
-          marker3.showInfoWindow();
-
-          //If clicked it, display the alert
-          marker3.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
-          this.showToast('Sell delicious tacos, burritos, and quesadillas!');
           });
 
           this.map.on(GoogleMapsEvent.MAP_READY).subscribe(

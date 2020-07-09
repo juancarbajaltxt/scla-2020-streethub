@@ -55,7 +55,7 @@ export class Tab2Page implements OnInit{
             //a marker
         let marker1: Marker = this.map.addMarkerSync({
           title: 'Elotero',
-          snippet: 'On the Go.',
+          snippet: '@elote',
           position: {
             lat: 34.023528,
             lng: -118.265320
@@ -67,7 +67,7 @@ export class Tab2Page implements OnInit{
         //a marker
         let marker2: Marker = this.map.addMarkerSync({
           title: 'Tacos Los Pelones',
-          snippet: 'Stationary',
+          snippet: '@tacos,@quesadillas',
           position: {
             lat: 34.019296,
             lng: -118.268001
@@ -78,7 +78,7 @@ export class Tab2Page implements OnInit{
         //a marker
         let marker3: Marker = this.map.addMarkerSync({
           title: 'Taquero',
-          snippet: 'Stationary',
+          snippet: '@tacos,@quesadillas',
           position: {
             lat: 34.016336, 
             lng: -118.264832
@@ -89,7 +89,7 @@ export class Tab2Page implements OnInit{
         //a marker
         let marker4: Marker = this.map.addMarkerSync({
           title: 'Tacos El Mazapan',
-          snippet: 'Stationary',
+          snippet: '@tacos,@quesadillas,@burros',
           position: {
             lat: 34.020971, 
             lng: -118.189337
@@ -100,7 +100,7 @@ export class Tab2Page implements OnInit{
         //a marker
         let marker5: Marker = this.map.addMarkerSync({
           title: 'Tamalera',
-          snippet: 'Stationary',
+          snippet: '@tamales',
           position: {
             lat: 34.022427, 
             lng: -118.265969
@@ -111,7 +111,7 @@ export class Tab2Page implements OnInit{
         //a marker
         let marker6: Marker = this.map.addMarkerSync({
           title: 'Churros',
-          snippet: 'On the Go',
+          snippet: '@churros',
           position: {
             lat: 34.040642, 
             lng: -118.186959
@@ -122,7 +122,7 @@ export class Tab2Page implements OnInit{
         //a marker
         let marker7: Marker = this.map.addMarkerSync({
           title: 'Crepas El Rey',
-          snippet: 'Stationary',
+          snippet: '@crepes',
           position: {
             lat: 34.009822, 
             lng: -118.265375
@@ -132,8 +132,8 @@ export class Tab2Page implements OnInit{
         
         //a marker
         let marker8: Marker = this.map.addMarkerSync({
-          title: 'Fruit',
-          snippet: 'Stationary',
+          title: 'Fruit Stand',
+          snippet: '@fruit',
           position: {
             lat: 34.040708,  
             lng: -118.184587

@@ -1,48 +1,46 @@
+<!--Select Radius Page-->
+
+
+
 <ion-content id ="content" padding>
   <div id="map_canvas">
     <ion-fab-button color="tomato"  id="btnBack" routerLink="tab1">
     <ion-tabs>
       <ion-tab-bar slot="left">
         <ion-tab-button tab="tab1">
-          Back
+          <ion-icon id="arrow-back" name="arrow-back"></ion-icon>
         </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>
-  </ion-fab-button>
+    </ion-fab-button>
   </div>
 </ion-content>
+
 <ion-footer id="footer">
-  <ion-title>Select a Radius to check for any available Vendors near you.</ion-title>
-<!--
-    Anchor 
-<ion-button href="#">Anchor</ion-button>
--->
-<!-- Expand -->
-<ion-row>
+
+  <ion-title>Select a Radius</ion-title>
+  <div class="mile-option">
+  <ion-tab-button tab = "tab1">1 Mile Radius</ion-tab-button>
+  </div>
+  <br/>
+  <div class="mile-option">
+  <ion-tab-button tab = "mile2"> 2 Mile Radius</ion-tab-button>
+  </div>
+  <br/>
+  <div class="mile-option">
+  <ion-tab-button tab = "mile3"> 3 Mile Radius</ion-tab-button>
+  </div>
+   
+</ion-footer>
+
+<!-- Anchor  <ion-button href="#">Anchor</ion-button> -->
+<!-- Expand 
     <ion-button>
       <ion-tabs layout="center">
-        <ion-tab-button tab="mile1">
+        <ion-tab-button tab="tab1">
           1 mile
         </ion-tab-button>
       </ion-tabs>
     </ion-button>
   </ion-row>
-  <ion-row>
-    <ion-button>
-      <ion-tabs layout="center">
-        <ion-tab-button tab="mile2">
-          2 mile
-        </ion-tab-button> 
-      </ion-tabs>
-    </ion-button>
-  </ion-row>
-  <ion-row>
-    <ion-button>
-      <ion-tabs layout="center">
-        <ion-tab-button tab="mile3">
-          3 mile
-        </ion-tab-button>
-      </ion-tabs>
-    </ion-button>
-  </ion-row>
-</ion-footer>
+-->

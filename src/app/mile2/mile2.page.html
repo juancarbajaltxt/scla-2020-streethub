@@ -1,9 +1,54 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>mile2</ion-title>
-  </ion-toolbar>
-</ion-header>
+<!--2 Mile Radius Option Page-->
 
-<ion-content>
 
+
+<ion-content id ="content" padding>
+  <div id="map_canvas">
+    <ion-fab-button color="tomato"  id="btnRadius" routerLink="tab2">
+    <ion-tabs>
+      <ion-tab-bar slot="left">
+        <ion-tab-button tab="tab2">
+          <ion-icon name="pin"></ion-icon>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+    </ion-fab-button>
+  </div>
 </ion-content>
+
+
+<ion-footer id="footer">
+
+  <ion-title>Street Vendors Near Me</ion-title>
+  <h2>2 Mile</h2>
+
+  <br>
+
+    <ion-card>
+      <ion-item class="ion-activated">
+        <ion-icon name="pin" slot="start"></ion-icon>
+        <ion-label><button routerLink = "/elotero">Elotero</button></ion-label>
+      </ion-item>
+
+      <ion-item class="ion-activated">
+        <ion-icon name="pin" slot="start"></ion-icon>
+        <ion-label><button routerLink = "/tamalera">Tamalera</button></ion-label>
+      </ion-item>
+
+      <ion-item class="ion-activated">
+        <ion-icon name="pin" slot="start"></ion-icon>
+        <ion-label><button routerLink = "/tacoslospelones">Tacos Los Pelones</button></ion-label>
+      </ion-item>
+
+      <ion-item class="ion-activated">
+        <ion-icon name="pin" slot="start"></ion-icon>
+        <ion-label><button routerLink = "/taquero">Taquero</button></ion-label>
+      </ion-item>
+
+      <ion-item class="ion-activated">
+        <ion-icon name="pin" slot="start"></ion-icon>
+        <ion-label><button routerLink = "/crepaselrey">Crepas El Rey</button></ion-label>
+      </ion-item>
+    </ion-card>
+
+</ion-footer>

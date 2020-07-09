@@ -7,27 +7,44 @@
 }
 #footer{
     height: 70%;
-    width: 100%;
     background-color: tomato;
-    color: white;
     text-align: center;
-}
-ion-tab-button{
-    color: white;
-}
-#btnBack { --ion-color-base: #ff6347 !important;
-}
-ion-row{
-    height: 100px;
-    text-align: center;
-}
-ion-button{
-    width: 100%;
-    text-align: center;
-}
-ion-tabs{
-    text-align: center;
+    overflow-y:auto;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
 }
 ion-tab-button{
     text-align: center;
+    height: 30px;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
 }
+#btnBack { 
+    --ion-color-base: #ff6347 !important;
+}
+#arrow-back{
+    color: white;
+}
+
+ion-title{
+    font-weight: bold;
+    font-size: 25px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    color:white;
+}
+.mile-option{
+    height: 20%;
+    display: block;
+    text-align: center;
+    padding: 30px;
+    background-color: white;
+    color: tomato;
+    border-radius: 50px;
+}
+.mile-option:hover {
+    background-color: red;
+    color: white;
+  }
+

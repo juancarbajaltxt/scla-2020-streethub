@@ -27,8 +27,10 @@
     "@ionic/angular": "^5.0.0",
     "cordova-browser": "6.0.0",
     "cordova-ios": "5.1.1",
+    "cordova-plugin-browsersync": "^1.1.0",
     "cordova-plugin-geolocation": "^4.0.2",
     "cordova-plugin-googlemaps": "^2.7.1",
+    "mongodb": "^3.5.9",
     "rxjs": "~6.5.1",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

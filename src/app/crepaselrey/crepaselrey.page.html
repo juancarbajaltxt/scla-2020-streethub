@@ -1,9 +1,23 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>crepaselrey</ion-title>
-  </ion-toolbar>
-</ion-header>
+<!--Taquero Page-->
 
-<ion-content>
 
+
+<ion-content id ="content" padding>
+  <div id="map_canvas">
+    <ion-fab-button color="tomato"  id="btnback" href="#">
+    <ion-tabs>
+      <ion-tab-bar slot="left">
+        <ion-button routerLink="/tabs/tab1">
+          <ion-icon name="arrow-back"></ion-icon>
+        </ion-button>
+      </ion-tab-bar>
+    </ion-tabs>
+    </ion-fab-button>
+  </div>
 </ion-content>
+<ion-footer id="footer">
+  <ion-title>Crepas El Rey</ion-title>
+  <p>Key words: @crepes</p>
+  <p>What is else is better than a sweet treat in the afternoon, than a deliciously fresh made crepe. Come join them and top your crepe with a variety of options!</p>
+  <ion-img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSmlxOvjfm7S79TGdbkMg8EGXXTiHZe4TRGug&usqp=CAU" alt="Image not loaded."></ion-img>
+</ion-footer>

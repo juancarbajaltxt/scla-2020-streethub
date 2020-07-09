@@ -1,15 +1,14 @@
 import { Component, OnInit, Input, ViewChild ,ElementRef } from '@angular/core';
 import { ToastController, Platform } from '@ionic/angular';
 import {GoogleMaps, GoogleMap, GoogleMapsEvent, Marker, GoogleMapsAnimation, MyLocation } from '@ionic-native/google-maps';
-
 @Component({
-  selector: 'app-taquero',
-  templateUrl: './taquero.page.html',
-  styleUrls: ['./taquero.page.scss'],
+  selector: 'app-tacoslospelones',
+  templateUrl: './tacoslospelones.page.html',
+  styleUrls: ['./tacoslospelones.page.scss'],
 })
-export class TaqueroPage implements OnInit {
+export class TacoslospelonesPage implements OnInit {
 
-    map: GoogleMap; //<- declare the variable
+  map: GoogleMap; //<- declare the variable
     address:MyLocation;
     places : Array<any> ;
     @ViewChild('map') mapElement: ElementRef;
@@ -68,29 +67,18 @@ export class TaqueroPage implements OnInit {
           //a marker
           let marker2: Marker = this.map.addMarkerSync({
             title: 'Tacos Los Pelones',
-            snippet: '@tacos,quesadillas',
+            snippet: '@tacos,@quesadillas',
             position: {
               lat: 34.019296,
               lng: -118.268001
             },
             animation: GoogleMapsAnimation.BOUNCE
           }); 
-          
-          //a marker
-          let marker3: Marker = this.map.addMarkerSync({
-            title: 'Taquero',
-            snippet: '@tacos,quesadillas',
-            position: {
-              lat: 34.016336, 
-              lng: -118.264832
-            },
-            animation: GoogleMapsAnimation.BOUNCE
-          });
           //show the infoWindow
-          marker3.showInfoWindow();
+          marker2.showInfoWindow();
 
           //If clicked it, display the alert
-          marker3.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
+          marker2.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
           this.showToast('Sell delicious tacos, burritos, and quesadillas!');
           });
 
@@ -99,6 +87,17 @@ export class TaqueroPage implements OnInit {
             console.log("Click MAP",data);
             }
           );
+          
+          //a marker
+          let marker3: Marker = this.map.addMarkerSync({
+            title: 'Taquero',
+            snippet: '@tacos,@quesadillas',
+            position: {
+              lat: 34.016336, 
+              lng: -118.264832
+            },
+            animation: GoogleMapsAnimation.BOUNCE
+          });
           
           //a marker
           let marker4: Marker = this.map.addMarkerSync({
@@ -125,7 +124,7 @@ export class TaqueroPage implements OnInit {
           //a marker
           let marker6: Marker = this.map.addMarkerSync({
             title: 'Churros',
-            snippet: '@churros',
+            snippet: 'churros',
             position: {
               lat: 34.040642, 
               lng: -118.186959
