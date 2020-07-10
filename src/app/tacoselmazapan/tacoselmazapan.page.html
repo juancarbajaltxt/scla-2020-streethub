@@ -1,9 +1,22 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>tacoselmazapan</ion-title>
-  </ion-toolbar>
-</ion-header>
+<!--Tacos El Mazapan Page-->
 
-<ion-content>
 
+
+<ion-content id ="content" padding>
+  <div id="map_canvas">
+    <ion-fab-button color="tomato"  id="btnback">
+    <ion-tabs>
+      <ion-tab-bar slot="left" style="--ion-button-color-base:tomato !important" onclick="history.go(-1)">
+          <ion-icon name="arrow-back"></ion-icon>
+      </ion-tab-bar>
+    </ion-tabs>
+    </ion-fab-button>
+  </div>
 </ion-content>
+
+<ion-footer id="footer">
+  <ion-title>Tacos El Mazapan</ion-title>
+  <p>Key words: @tacos, @quesadillas, @burros</p>
+  <p>It is there for you, even in the latest nights, they will be serving hot sizzling tacos, burritos or quesadillas. Come join them to stop your stomach from growling more, and to get one of your favorite cravings.</p>
+  <ion-img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQVUxO8oUtAFqhu_y_D_sxhlvfHzxAnGHQp_g&usqp=CAU" alt="Image not loaded."></ion-img>
+</ion-footer>

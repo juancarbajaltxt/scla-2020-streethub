@@ -67,7 +67,7 @@ export class TacoslospelonesPage implements OnInit {
           //a marker
           let marker2: Marker = this.map.addMarkerSync({
             title: 'Tacos Los Pelones',
-            snippet: '@tacos,@quesadillas',
+            snippet: '@tacos,@vampiros',
             position: {
               lat: 34.019296,
               lng: -118.268001

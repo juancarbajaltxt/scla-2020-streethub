@@ -4,20 +4,19 @@
 
 <ion-content id ="content" padding>
   <div id="map_canvas">
-    <ion-fab-button color="tomato"  id="btnback" href="#">
+    <ion-fab-button color="tomato"  id="btnback">
     <ion-tabs>
-      <ion-tab-bar slot="left">
-        <ion-button routerLink="/tabs/tab1">
+      <ion-tab-bar slot="left" style="--ion-button-color-base:tomato !important" onclick="history.go(-1)">
           <ion-icon name="arrow-back"></ion-icon>
-        </ion-button>
       </ion-tab-bar>
     </ion-tabs>
     </ion-fab-button>
   </div>
 </ion-content>
+
 <ion-footer id="footer">
   <ion-title>Tacos Los Pelones</ion-title>
-  <p>Key words: @tacos, @quesadillas</p>
-  <p>It is there for you, even in the latest nights, they will be serving freash hot sizzled tacos or burritos. Come join them to stop you stomach from growling more, and get one of your favorite cravings.</p>
+  <p>Key words: @tacos, @vampiros</p>
+  <p>It is there for you, even in the latest nights, they will be serving hot sizzling tacos or vampiros. Come join them to stop your stomach from growling more, and to get one of your favorite cravings.</p>
   <ion-img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQVUxO8oUtAFqhu_y_D_sxhlvfHzxAnGHQp_g&usqp=CAU" alt="Image not loaded."></ion-img>
 </ion-footer>

@@ -18,12 +18,19 @@ ion-tab-button{
 }
 #btnback { 
     --ion-color-base: #ff6347 !important; 
+    color: white;
+}
+#arrow-back{
+    color: white;
+}
+ion-icon {
+    color: white;
+    font-size: 24px;
 }
 ion-button{
     width: 100%;
     text-align: center;
     color: white;
-    background-color: tomato;
 }
 ion-tabs{
     text-align: center;

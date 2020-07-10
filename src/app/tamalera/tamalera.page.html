@@ -1,9 +1,22 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>tamalera</ion-title>
-  </ion-toolbar>
-</ion-header>
+<!--Tamalera Page-->
 
-<ion-content>
 
+
+<ion-content id ="content" padding>
+  <div id="map_canvas">
+    <ion-fab-button color="tomato"  id="btnback">
+    <ion-tabs>
+      <ion-tab-bar slot="left" style="--ion-button-color-base:tomato !important" onclick="history.go(-1)">
+          <ion-icon name="arrow-back"></ion-icon>
+      </ion-tab-bar>
+    </ion-tabs>
+    </ion-fab-button>
+  </div>
 </ion-content>
+
+<ion-footer id="footer">
+  <ion-title>Tamalera</ion-title>
+  <p>Key words: @tamales</p>
+  <p>Nothing is better than a tamale made from scratch, brought to you form the hard work and process it takes to create them. So come to your local stand and buy a tamal.</p>
+  <ion-img src="https://www.seriouseats.com/images/2015/04/20150429-tamales-joshua-bousel.jpg"></ion-img>
+</ion-footer>
