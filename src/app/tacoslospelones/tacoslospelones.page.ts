@@ -52,6 +52,7 @@ export class TacoslospelonesPage implements OnInit {
               zoom: 19,
               duration: 3000
             });
+
               //a marker
           let marker1: Marker = this.map.addMarkerSync({
             title: 'Elotero',
